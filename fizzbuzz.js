@@ -1,14 +1,5 @@
-let answer = "";
-for (let i = 1; i <= 100; i++) {
-  if (i % 3 === 0 && i % 5 === 0) {
-    answer += "fizzbuzz\n";
-  } else if (i % 3 === 0) {
-    answer += `fizz\n`;
-  } else if (i % 5 === 0) {
-    answer += "buzz\n";
-  } else {
-    answer += `${i}\n`;
-  }
-}
-
-console.log(answer);
+Array.from(Array(100).keys()).forEach((i) => {
+  let fizz = i % 3 === 0,
+    buzz = i % 5 === 0;
+  console.log(fizz ? (buzz ? "fizzbuzz" : "fizz") : buzz ? "buzz" : i);
+});
