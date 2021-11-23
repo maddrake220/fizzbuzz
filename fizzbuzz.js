@@ -1,6 +1,10 @@
 let answer = "";
 for (let i = 1; i <= 100; i++) {
-  answer += `${i}\n`;
+  if (i % 3 === 0) {
+    answer += "fizz\n";
+  } else {
+    answer += `${i}\n`;
+  }
 }
 
 console.log(answer);
